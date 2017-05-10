@@ -44,6 +44,7 @@
             this.btnDecrypt.TabIndex = 0;
             this.btnDecrypt.Text = "Decrypt";
             this.btnDecrypt.UseVisualStyleBackColor = true;
+            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // btnEncrypt
             // 
@@ -66,6 +67,7 @@
             // 
             this.txtOutput.Location = new System.Drawing.Point(136, 25);
             this.txtOutput.Name = "txtOutput";
+            this.txtOutput.ReadOnly = true;
             this.txtOutput.Size = new System.Drawing.Size(100, 20);
             this.txtOutput.TabIndex = 3;
             // 
@@ -100,6 +102,7 @@
             this.Controls.Add(this.txtInput);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
