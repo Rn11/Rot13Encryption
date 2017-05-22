@@ -24,7 +24,7 @@ namespace Rot13Encryption
             // fill array
             for (int i = 0; i < txtInput.TextLength; i++)
             {
-                input.Add(txtInput.Text[i].ToString().ToLower());
+                input.Add(txtInput.Text[i].ToString());
             }
             return input;
         }
@@ -38,7 +38,15 @@ namespace Rot13Encryption
                 // convert current letter to char
                 char c = Convert.ToChar(input[i]);
                 // increment char by 13
-                input[i] = c = (char)('a' + (c - 'a' + 13) % 26);
+                // check if current char is between 65-122 (= a letter)
+                if (c >= 65 && c <= 122)
+                {
+                        input[i] = c = (char)('a' + (c - 'a' + 13) % 26);
+                }
+                else
+                {
+                    input[i] = c;
+                }
             }
             showResult(input);
         }
