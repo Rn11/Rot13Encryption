@@ -28,47 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDecrypt = new System.Windows.Forms.Button();
-            this.btnEncrypt = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtInput = new System.Windows.Forms.TextBox();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.lblInput = new System.Windows.Forms.Label();
             this.lblOutput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnDecrypt
-            // 
-            this.btnDecrypt.Location = new System.Drawing.Point(12, 89);
-            this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(100, 22);
-            this.btnDecrypt.TabIndex = 0;
-            this.btnDecrypt.Text = "Decrypt";
-            this.btnDecrypt.UseVisualStyleBackColor = true;
-            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
-            // 
-            // btnEncrypt
-            // 
-            this.btnEncrypt.Location = new System.Drawing.Point(12, 61);
-            this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(100, 22);
-            this.btnEncrypt.TabIndex = 1;
-            this.btnEncrypt.Text = "Encrypt";
-            this.btnEncrypt.UseVisualStyleBackColor = true;
-            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
-            // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(12, 25);
+            this.txtInput.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtInput.Location = new System.Drawing.Point(15, 25);
+            this.txtInput.Multiline = true;
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(100, 20);
-            this.txtInput.TabIndex = 2;
+            this.txtInput.Size = new System.Drawing.Size(281, 63);
+            this.txtInput.TabIndex = 1;
+            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
+            this.txtInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInput_KeyDown);
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(136, 25);
+            this.txtOutput.Location = new System.Drawing.Point(15, 107);
+            this.txtOutput.Multiline = true;
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(100, 20);
+            this.txtOutput.Size = new System.Drawing.Size(281, 63);
             this.txtOutput.TabIndex = 3;
             // 
             // lblInput
@@ -83,7 +67,7 @@
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(133, 9);
+            this.lblOutput.Location = new System.Drawing.Point(12, 91);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(39, 13);
             this.lblOutput.TabIndex = 5;
@@ -93,25 +77,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 127);
-            this.Controls.Add(this.btnEncrypt);
+            this.ClientSize = new System.Drawing.Size(311, 182);
             this.Controls.Add(this.lblOutput);
-            this.Controls.Add(this.btnDecrypt);
             this.Controls.Add(this.lblInput);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.txtInput);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Rot13 Encryption";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnDecrypt;
-        private System.Windows.Forms.Button btnEncrypt;
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.Label lblInput;
