@@ -38,7 +38,7 @@
             // 
             // btnDecrypt
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(12, 89);
+            this.btnDecrypt.Location = new System.Drawing.Point(136, 61);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(100, 22);
             this.btnDecrypt.TabIndex = 0;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(248, 127);
+            this.ClientSize = new System.Drawing.Size(248, 94);
             this.Controls.Add(this.btnEncrypt);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.btnDecrypt);
