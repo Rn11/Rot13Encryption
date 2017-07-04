@@ -79,5 +79,11 @@ namespace Rot13Encryption
         {
             rot13();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Version f_ver = new Version();
+            f_ver.Show();
+        }
     }
 }
